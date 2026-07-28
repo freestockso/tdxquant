@@ -22,3 +22,57 @@ output
 TQ数据接口初始化成功，使用路径: d:\Thirdprogram\newtdxtqv772\PYPlugins\user\tdxdata_test_demo.py
 {"ErrorId":"0","Msg":"Refresh Cache Success.","run_id":"2"}
 ~~~
+
+### 获取股票涨跌停数据 -  tq.get_zdt_data(()
+
+~~~
+
+'''
+    获取股票涨跌停数据
+'''
+zdt_data = tq.get_zdt_data(stock_list=['002745.SZ','688318.SH'])
+print(zdt_data)
+print(json.dumps(zdt_data, indent=4, ensure_ascii=False))
+
+~~~
+
+output
+
+~~~
+{
+    "002745.SZ": {
+        "Code": ".SZ",
+        "TimeNow": "0",
+        "ZDTStatusNow": "0",
+        "ZDTStatusOri": "0",
+        "FirstTimeZT": "0",
+        "FirstTimeDT": "0",
+        "LastOpenTimeZT": "0",
+        "LastOpenTimeDT": "0",
+        "LastTimeZT": "0",
+        "LastTimeDT": "0",
+        "OpenTimesZT": "0",
+        "OpenTimesDT": "0",
+        "FDVolMaxZT": "0.00",
+        "FDVolMaxDT": "0.00",
+        "VolZT": "0.00"
+    },
+    "688318.SH": {
+        "Code": ".SZ",
+        "TimeNow": "0",
+        "ZDTStatusNow": "0",
+        "ZDTStatusOri": "0",
+        "FirstTimeZT": "0",
+        "FirstTimeDT": "0",
+        "LastOpenTimeZT": "0",
+        "LastOpenTimeDT": "0",
+        "LastTimeZT": "0",
+        "LastTimeDT": "0",
+        "OpenTimesZT": "0",
+        "OpenTimesDT": "0",
+        "FDVolMaxZT": "0.00",
+        "FDVolMaxDT": "0.00",
+        "VolZT": "0.00"
+    }
+}
+~~~
