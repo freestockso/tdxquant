@@ -1,2 +1,24 @@
 # tdxquant
 tdx quant
+
+
+### 刷新行情缓存 - tq.refresh_cache()
+
+~~~
+'''
+    刷新行情缓存 刷新后5分钟内取最新report和k线数据不会触发刷新
+    force参数表示是否强制刷新 默认False
+    market参数表示指定市场刷新
+    'AG'表示A股 'HK'表示港股 'US'表示美股 'QH'表示期货  'QQ'表示期权  'ZZ'表示中证国证指数 'ZS' 表示沪深京指数
+'''
+refresh_cache = tq.refresh_cache()
+print(refresh_cache)
+
+~~~
+
+output
+
+~~~
+TQ数据接口初始化成功，使用路径: d:\Thirdprogram\newtdxtqv772\PYPlugins\user\tdxdata_test_demo.py
+{"ErrorId":"0","Msg":"Refresh Cache Success.","run_id":"2"}
+~~~
