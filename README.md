@@ -23,6 +23,33 @@ TQ数据接口初始化成功，使用路径: d:\Thirdprogram\newtdxtqv772\PYPlu
 {"ErrorId":"0","Msg":"Refresh Cache Success.","run_id":"2"}
 ~~~
 
+###  获取分红送配数据 - tq.get_divid_factors
+
+~~~
+divid_factors = tq.get_divid_factors(
+        stock_code='688318.SH',
+        start_time='',
+        end_time='')
+print(divid_factors)
+~~~
+
+output
+
+~~~
+           Type  Bonus  AllotPrice  ShareBonus  Allotment
+Date                                                     
+2020-09-29    1    6.0         0.0         0.0        0.0
+2021-05-27    1   10.0         0.0         0.0        0.0
+2022-06-20    1   14.0         0.0         4.0        0.0
+2023-06-13    1    5.0         0.0         4.0        0.0
+2024-06-14    1    8.0         0.0         4.0        0.0
+2024-10-18    1    1.1         0.0         0.0        0.0
+2025-06-06    1    5.0         0.0         4.0        0.0
+2026-06-05    1    3.8         0.0         4.0        0.0
+
+~~~
+
+
 ### 获取股票涨跌停数据 -  tq.get_zdt_data(()
 
 ~~~
