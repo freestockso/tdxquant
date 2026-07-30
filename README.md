@@ -49,6 +49,83 @@ Date
 
 ~~~
 
+###  获取市场快照数据 - tq.get_market_snapshot
+
+~~~
+'''
+    获取市场快照数据,调用会触发客户端刷新数据，耗时过长请耐心等待
+    总成交额为万位，其他无特殊说明均为个位
+    曾用名：get_full_tick get_report_data
+'''
+tq.refresh_cache(force=True)
+market_snapshot = tq.get_market_snapshot(stock_code = '300078.SZ', field_list=[])
+print(market_snapshot)
+
+print(json.dumps(market_snapshot, indent=4, ensure_ascii=False))
+
+~~~
+
+output
+
+~~~
+{
+    "ErrorId": "0",
+    "ItemNum": "2332",
+    "LastClose": "2.87",
+    "Open": "2.84",
+    "Max": "2.96",
+    "Min": "2.82",
+    "Now": "2.83",
+    "Volume": "289706",
+    "NowVol": "1318",
+    "Amount": "8362.57",
+    "Inside": "160425",
+    "Outside": "129281",
+    "TickDiff": "0.00",
+    "InOutFlag": "2",
+    "Jjjz": "0.00",
+    "Buyp": [
+        "2.83",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00"
+    ],
+    "Buyv": [
+        "1633",
+        "0",
+        "0",
+        "0",
+        "0"
+    ],
+    "Sellp": [
+        "2.85",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00"
+    ],
+    "Sellv": [
+        "1411",
+        "0",
+        "0",
+        "0",
+        "0"
+    ],
+    "UpHome": "0",
+    "DownHome": "0",
+    "Before5MinNow": "2.82",
+    "Average": "2.89",
+    "XsFlag": "2",
+    "Zangsu": "0.35",
+    "ZAFPre3": "2.54"
+}
+
+~~~
+
+
+
+
 
 ### 获取股票涨跌停数据 -  tq.get_zdt_data(()
 
